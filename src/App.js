@@ -1,25 +1,49 @@
 import logo from './logo.svg';
 import './App.css';
+import Example from './components/Example'
+import Book from  './components/'
+import Books from  './components/Books'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  var authors = [
+    {
+      author:"Tom Mitchell",
+      book:"Machine Learning",
+      year:1999
+    },
+    {
+      author:"Ian Goodfellow",
+      book:"Deep Learning",
+      year:2016
+    },
+    {
+      author:"Russel Norvig",
+      book:"AI a Modern Approach",
+      year:2015
+    },
+  ]
+
+  var x = Math.random()
+  /* this is a comment line */
+  /* console.log(x) */
+  if (x > 0.5){
+    return (
+      <div>
+        {/* This is a comment line formatted for HTML */}
+        {/* <Example /> */}
+
+        <Books authors={authors} />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        Hello World
+        <Example />
+      </div>
+    );
+  }
+
 }
 
 export default App;
